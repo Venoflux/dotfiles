@@ -1,0 +1,48 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/home/venoflux/.emacs.d/init.el" . 2959)
+ ("/home/venoflux/.local/share/chezmoi/private_dot_emacs.d/"
+  (dired-filename
+   . "/home/venoflux/.local/share/chezmoi/private_dot_emacs.d/private_auto-save-list"))
+ ("/home/venoflux/projects/elisp/test/"
+  (dired-filename . "/home/venoflux/projects/elisp/test/test.el"))
+ ("/home/venoflux/.emacs.d/lisp/"
+  (dired-filename . "/home/venoflux/.emacs.d/lisp/paredit.el"))
+ ("/home/venoflux/.emacs.d/lisp/paredit.el" . 200)
+ ("/home/venoflux/projects/elisp/"
+  (dired-filename . "/home/venoflux/projects/elisp/test"))
+ ("/home/venoflux/projects/"
+  (dired-filename . "/home/venoflux/projects/elisp"))
+ ("/home/venoflux/projects/guile/hello/hello.scm" . 47)
+ ("/home/venoflux/projects/guile/"
+  (dired-filename . "/home/venoflux/projects/guile/hello"))
+ ("/home/venoflux/projects/guile/hello/"
+  (dired-filename . "/home/venoflux/projects/guile/hello/hello.scm"))
+ ("/home/venoflux/.emacs.d/lisp/corfu.el" . 245)
+ ("/home/venoflux/.emacs.d/lisp/zig-mode.el" . 43)
+ ("/home/venoflux/.emacs.d/lisp/treesit-auto.el" . 50)
+ ("/home/venoflux/.emacs.d/lisp/project.el" . 80)
+ ("/home/venoflux/.emacs.d/lisp/core.el" . 506)
+ ("/home/venoflux/.emacs.d/lisp/geiser.el" . 97)
+ ("/home/venoflux/.emacs.d/lisp/eglot.el" . 312)
+ ("/home/venoflux/projects/static_site/.gitignore" . 100)
+ ("/home/venoflux/projects/static_site/src/copy_static.py" . 1278)
+ ("/home/venoflux/projects/static_site/src/main.py" . 195)
+ ("/home/venoflux/projects/static_site/main.sh" . 28)
+ ("/home/venoflux/projects/static_site/build.sh" . 39)
+ ("/home/venoflux/.emacs.d/"
+  (dired-filename . "/home/venoflux/.emacs.d/lisp"))
+ ("/home/venoflux/projects/static_site/src/test_textnode.py" . 2656)
+ ("/home/venoflux/projects/static_site/src/inline_markdown.py" . 1623)
+ ("/usr/share/emacs/30.2/etc/HELLO" . 3943)
+ ("/home/venoflux/projects/static_site/src/test_inline_markdown.py"
+  . 2629)
+ ("/home/venoflux/projects/zig/hello-world/src/"
+  (dired-filename
+   . "/home/venoflux/projects/zig/hello-world/src/main.zig"))
+ ("/home/venoflux/projects/zig/hello-world/src/main.zig" . 188)
+ ("/home/venoflux/projects/zig/hello-world/"
+  (dired-filename . "/home/venoflux/projects/zig/hello-world/src"))
+ ("/home/venoflux/projects/zig/"
+  (dired-filename . "/home/venoflux/projects/zig/hello-world"))
+ ("/home/venoflux/.emacs.d/lisp/vterm.el" . 44)
+ ("/home/venoflux/.emacs.d/lisp/dired.el" . 630))

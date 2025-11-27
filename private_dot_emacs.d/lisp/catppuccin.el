@@ -1,0 +1,6 @@
+(use-package catppuccin-theme
+  :ensure t
+  :demand t
+  :init (setq catppuccin-flavor 'mocha)
+  :config (load-theme 'catppuccin t))
+

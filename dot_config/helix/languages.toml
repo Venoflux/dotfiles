@@ -1,0 +1,38 @@
+[language-server.ruff-lsp]
+command = "ruff"
+args = ["server"]
+
+[language-server.ruff-lsp.config]
+documentFormatting = true 
+settings.run = "onSave"
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = [ "--stdio" ]
+config.reportMissingtypeStubs = false
+
+[[language]]
+name = "python"
+auto-format = true
+language-servers = ["ruff", "pyright"]
+
+
+[[language]]
+name = "cpp"
+scope = "source.cpp"
+file-types = ["cpp", "cc", "cxx", "hpp", "hh", "hxx"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = ["clangd"]
+indent = { tab-width = 2, unit = " " }
+auto-format = true
+formatter = { command = "clang-format", args = ["--style=LLVM"] } 
+
+[[language]]
+name = "cmake"
+auto-format = true
+language-servers = [{ name = "neocmakelsp" }]
+
+[language-server.neocmakelsp]
+command = "neocmakelsp"
+args = ["--stdio"]

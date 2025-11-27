@@ -1,0 +1,15 @@
+(use-package eglot
+  :ensure nil
+  :demand nil
+  :defer t
+  :hook ((python-ts-mode . eglot-ensure)
+         (go-mode . eglot-ensure)
+         (zig-mode . eglot-ensure)
+         (c-ts-mode . eglot-ensure)
+         (c++-ts-mode . eglot-ensure))
+  :config
+  (add-to-list 'eglot-server-programs
+               `(python-ts-mode
+                 . ,(eglot-alternatives '(("pyright-langserver" "--stdio")
+                                          "pylsp")))))
+

@@ -1,0 +1,6 @@
+(insert 'cl)
+(insert cl)
+(insert 'cl)
+(insert 'cl-lib)
+(insert cl-lib)
+(require 'cl)

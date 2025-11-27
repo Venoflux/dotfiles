@@ -1,0 +1,98 @@
+;;Turns off elpaca-use-package-mode current declaration
+;;Note this will cause evaluate the declaration immediately. It is not deferred.
+;;Useful for configuring built-in emacs features.
+(use-package emacs
+  :ensure nil
+  :demand nil
+  :hook (after-init . (lambda () (setq gc-cons-threshold (* 2 1000 1000))))
+  :config
+  ;; Startup screen and warning light
+  (setq inhibit-startup-screen t
+	visible-bell nil)
+  ;; Turnoff unneeded UI elements
+ (menu-bar-mode -1)
+ (tool-bar-mode -1)
+ (scroll-bar-mode -1)
+
+ ;; Line Numbers
+ ;; Enable line numbers globally
+ (global-display-line-numbers-mode t)
+ (setq display-line-numbers-type 'relative)
+ (dolist (mode '(org-mode-hook
+                 pdf-view-mode-hook
+                 imenu-list-minor-mode-hook
+		 imenu-list-major-mode-hook
+                 help-mode-hook
+                 term-mode-hook
+                 eshell-mode-hook
+        	 treemacs-mode-hook
+                 dired-mode-hook
+                 ; eat-mode-hook
+        	 vterm-mode-hook
+                 sly-mode-hook
+                 geiser-repl-mode-hook))
+   (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
+ 
+ ;; Highlight line mode
+ (global-hl-line-mode t)
+
+ ;; Paren highlight
+ (show-paren-mode 1)
+ (setq show-paren-delay 0)
+
+ (blink-cursor-mode t) ;; Blinking cursor mode
+ (recentf-mode 1) ;; Remember recently edited files
+
+ ;; Save what you enter into minibuffer prompts
+ (setq history-length 25)
+ (savehist-mode 1)
+
+ ;; Remember and restore the last cursor location of opened files
+ (save-place-mode 1)
+ ;; Don't pop up UI dialogs when prompting
+ (setq use-dialog-box nil)
+ ;; Revert buffers when the underlying file has changed
+ (global-auto-revert-mode 1)
+ ;; Revert Dired and other buffers
+ (setq global-auto-revert-non-file-buffers t)
+
+ ;; Slow Rendering Fonts
+ (setq inhibit-compacting-font-caches t)
+
+ ;; Prevent Extraneous Tabs
+ (setq-default indent-tabs-mode nil)
+
+ ;; Font
+ (add-to-list 'default-frame-alist
+              '(font . "FiraCode Nerd Font Mono-12"))
+ 
+ (global-prettify-symbols-mode)
+
+ (setq x-select-enable-clipboard t)
+ 
+ (fset 'yes-or-no-p 'y-or-n-p)
+
+ ;; Treesitter
+ (setq treesit-font-lock-level 4)
+ (setq major-mode-remap-alist
+       '((python-mode . python-ts-mode)
+         (c-mode . c-ts-mode)
+         (c++-mode . c++-ts-mode)))
+
+ ;; ibuffer
+ (global-set-key [remap list-buffers] 'ibuffer)
+ 
+ :bind
+ (("C-+" . text-scale-increase)
+  ("C--" . text-scale-decrease)
+  ("<f5>" . treemacs)
+  ("<f6>" . flymake-show-buffer-diagnostics)
+  ("<f7>" . vterm)
+  ("C-o" . other-window)
+  ("s-b" . switch-to-buffer)
+  ("C-q" . kill-buffer)
+  ("S-C-<left>" . shrink-window-horizontally)
+  ("S-C-<right>" . enlarge-window-horizontally)
+  ("S-C-<down>" . shrink-window)
+  ("S-C-<up>" . enlarge-window)))
