@@ -73,6 +73,9 @@
  
  (fset 'yes-or-no-p 'y-or-n-p)
 
+ ;; Backups in one directory
+ (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+
  ;; Treesitter
  (setq treesit-font-lock-level 4)
  (setq major-mode-remap-alist

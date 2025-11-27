@@ -2,6 +2,7 @@
 */*.*~
 **/*.*~
 *.elc
+**/backups/** # We only want contents to be ignored
 **/auto-save-list/
 **/auto-save-list/**
 **/recentf/
